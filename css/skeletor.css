@@ -1,0 +1,253 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+/* Roboto Regular & Bold */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+/* Colors */
+/* Primary Colors */
+:root {
+  --primary: #007bff;
+  --primary-light: #60a3d9;
+  --primary-dark: #004085;
+}
+
+/* Secondary Colors */
+:root {
+  --secondary: #28a745;
+  --secondary-light: #75c584;
+  --secondary-dark: #1e7e34;
+}
+
+/* Tertiary Colors */
+:root {
+  --tertiary: #333;
+  --tertiary-light: #666;
+  --tertiary-dark: #000;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.3);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0.2rem 0.5rem 0.8rem rgba(0,0,0,0.3);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0.2rem 0.5rem 0.8rem rgba(0,0,0,0.3);
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.3);
+  padding: 1rem;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 2rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--tertiary);
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  display: inline-block;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.3);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.add-to-cart:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0.2rem 0.5rem 0.8rem rgba(0,0,0,0.3);
+}
+
+/* Online Orders Section */
+.online-orders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.online-order {
+  width: calc(25% - 1.5rem);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.online-order img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.online-order .title {
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+online-order .price {
+  font-size: 15px;
+  margin-top: 0.5rem;
+}
+
+add-to-cart-sm {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 15px;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart-sm:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 992px) {
+  .online-order {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .online-order {
+    width: calc(50% - 1rem);
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .online-order {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+.online-order {
+  position: relative;
+}
+
+.add-to-cart-sm {
+  display: none;
+}
+
+.online-order:hover .add-to-cart-sm {
+  display: inline-block;
+  transform: translateY(-1rem);
+}
+
+four-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+four-columns .online-order {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+four-columns .title {
+  font-size: 15px;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+four-columns .price {
+  display: none;
+}
+
+four-columns:hover .add-to-cart-sm {
+  transform: translateY(-0.5rem);
+}
